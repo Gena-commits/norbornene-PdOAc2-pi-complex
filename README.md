@@ -1,41 +1,77 @@
-
 # π-Complex Formation: Norbornene + Pd(OAc)₂
 
-## Computational Study
-Systematic DFT investigation of π-complex formation between norbornene and Pd(OAc)₂ using **two functionals** and **two solvent models**.
+Systematic DFT study of π-complex formation using **PBE0** and **PBE** functionals in **gas phase** and **dichloromethane (SMD)**.
 
-### 📊 Calculation Matrix
+## 📊 Status Overview
+
 | Functional | Gas Phase       | Dichloromethane (SMD) |
 |------------|-----------------|------------------------|
 | **PBE0**   | ✅ Done         | ✅ Done (endo/exo)     |
 | **PBE**    | 🚧 In progress  | 🚧 In progress         |
 
-### 🧪 Details
-- **Software**: ORCA 6.1.0
-- **Basis set**: SARC-ZORA-TZVP (Pd), SARC-ZORA-TZVP (any elements)
-- **Solvation model**: SMD for dichloromethane (ε = 8.93)
-- **Key species**:
-  - Reagents: Pd(OAc)₂, norbornene
-  - π-Complexes: endo and exo isomers
+## 🧪 Methodology
+- **Software**: ORCA 6.1.0  
+- **Basis set**: SARC-ZORA-TZVP  
+- **Solvation**: SMD (ε = 8.93 for DCM)  
+- **Species**: Pd(OAc)₂, norbornene, π-complexes (endo/exo)
 
-### 🗂 Repository Structure
-norbornene-PdOAc2-pi-complex/
-├── functional_PBE0/ # PBE0 functional
-│ ├── solvent_gas/ # Gas phase calculations
-│ │ ├── 01_reagents/ # Input structures
-│ │ └── 02_pi_complex/ # Optimized complexes
-│ └── solvent_DCM/ # Dichloromethane (SMD)
-│ ├── 01_reagents/
-│ └── 02_pi_complex/ # ✅ endo/exo complexes calculated
-└── functional_PBE/ # PBE functional
-├── solvent_gas/
-└── solvent_DCM/
-### 🔬 Current Status
-- ✅ **PBE0/DCM**: reagents optimized, π-complexes (endo/exo) located
-- 🚧 **PBE/DCM**: geometry preparation
-- ⏳ **Gas phase calculations**: to be started after solvent studies
+## 🗂 Repository Structure
 
-### 📌 Notes
-- All **input files** (`.inp`, `.xyz`) are committed
-- **Output files** (`.out`, `.gbw`) are ignored via `.gitignore`
-- TS and IRC calculations pending for both functionals
+- **`functional_PBE0/`** — расчёты с функционалом PBE0
+  - `solvent_gas/` — газовая фаза
+    - `01_reagents/` — исходные структуры
+    - `02_pi_complex/` — π-комплексы
+  - `solvent_DCM/` — дихлорметан (SMD)
+    - `01_reagents/`
+    - `02_pi_complex/` ✅ (эндо и экзо готовы)
+
+- **`functional_PBE/`** — расчёты с функционалом PBE
+  - `solvent_gas/`
+  - `solvent_DCM/`
+
+## 📌 Notes
+- Все входные файлы (`.inp`, `.xyz`) сохранены.
+- Выходные файлы (`.out`, `.gbw`) игнорируются (см. `.gitignore`).
+- TS и IRC — в планах.
+EOF# π-Complex Formation: Norbornene + Pd(OAc)₂
+
+Systematic DFT study of π-complex formation using **PBE0** and **PBE** functionals in **gas phase** and **dichloromethane (SMD)**.
+
+## 📊 Status Overview
+
+| Functional | Gas Phase       | Dichloromethane (SMD) |
+|------------|-----------------|------------------------|
+| **PBE0**   | ✅ Done         | ✅ Done (endo/exo)     |
+| **PBE**    | 🚧 In progress  | 🚧 In progress         |
+
+## 🧪 Methodology
+- **Software**: ORCA 6.1.0  
+- **Basis set**: SARC-ZORA-TZVP  
+- **Solvation**: SMD (ε = 8.93 for DCM)  
+- **Species**: Pd(OAc)₂, norbornene, π-complexes (endo/exo)
+
+## 🗂 Repository Structure
+
+- **`functional_PBE0/`** — расчёты с функционалом PBE0
+  - `solvent_gas/` — газовая фаза
+    - `01_reagents/` — исходные структуры
+    - `02_pi_complex/` — π-комплексы
+  - `solvent_DCM/` — дихлорметан (SMD)
+    - `01_reagents/`
+    - `02_pi_complex/` ✅ (эндо и экзо готовы)
+
+- **`functional_PBE/`** — расчёты с функционалом PBE
+  - `solvent_gas/`
+  - `solvent_DCM/`
+
+## 📌 Notes
+- Все входные файлы (`.inp`, `.xyz`) с- `02_pi_complex/` ✅ (эндо и экзо готовы)
+
+- **`functional_PBE/`** — расчёты с функционалом PBE
+  - `solvent_gas/`
+  - `solvent_DCM/`
+
+## 📌 Notes
+- Все входные файлы (`.inp`, `.xyz`) сохранены.
+- Выходные файлы (`.out`, `.gbw`) игнорируются (см. `.gitignore`).
+- TS и IRC — в планах.
