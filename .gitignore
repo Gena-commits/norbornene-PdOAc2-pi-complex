@@ -1,0 +1,18 @@
+# ORCA
+*.out
+*.gbw
+*.prop
+*.engrad
+*.hess
+*_opt.xyz
+*_irc.xyz
+scratch/
+ORCA_scratch/
+
+# Python
+__pycache__/
+*.pyc
+
+# OS
+.DS_Store
+Thumbs.db
